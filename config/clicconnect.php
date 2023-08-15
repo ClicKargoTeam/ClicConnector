@@ -12,6 +12,6 @@ return [
     // Debug Mode
     'debug' => env('CLIC_CONNECTOR_DEBUG', false),
 
-    // Optional: Throw errot if directory not exists or empty
+    // Optional: Throw error if directory not exists or empty
     'throw_error' => env('CLIC_CONNECTOR_THROW_ERROR', false),
 ];
