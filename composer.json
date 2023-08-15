@@ -1,0 +1,44 @@
+{
+    "name": "clickargoteam/clic-connector",
+    "description": "Connector for Clic Service",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Adli I. Ifkar",
+            "email": "adly.shadowbane@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1 || ^8.2",
+        "ext-json": "*",
+        "laravel/framework": "^v8.49.0 || ^v9.52 || ^v10.17",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "orchestra/testbench": "^8.0",
+        "phpstan/phpstan": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClicKargoTeam\\ClicConnector\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "bash .contrib/setup.sh"
+        ],
+        "pint": "./vendor/bin/pint --config=pint.json"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ClicKargoTeam\\ClicConnector\\Providers\\ClicConnectorServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
